@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: white;
+}
+
+ul {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: url("assets/city1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.weatherForecast__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.weatherForecast__row .weatherForecast__card-header h2 {
+  display: none;
+}
+
+.weatherForecast__card-headerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherForecast__card {
+  width: 25%;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  background: url("assets/background.jpg");
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.weatherForecast__row .weatherForecast__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.weatherForecast__card-header {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+.weatherForecast__card-header > h2 {
+  font-size: 29px;
+}
+
+.weatherForecast__card-body {
+  padding: 10px 20px 20px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.weatherForecast__today-weather ul li {
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.weatherForecast__forecast-icon > h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+
+.weatherForecast__today-weather h3 {
+  color: white;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.weatherForecast__todayWeatherList-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weatherForecast__tempDigit {
+  margin: 0 auto;
+  font-size: 9vh;
+}
+
+.weatherForecast__todayWeatherList-flex h4 {
+  color: white;
+}
+
+.weatherForecast__todayWeatherList span {
+  padding-left: 45px;
+}
+
+.--standAlone {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 20px !important;
+}
+
+.--standAlone > .weatherForecast__forecast-icon {
+  padding-top: 20px;
+}
+
+.--standAlone > .weatherForecast__card-header {
+  background: none;
+}
+
+.--whiteLine {
+  border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 1000px) {
+  .weatherForecast__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .weatherForecast__card {
+    width: 100%;
+  }
+  .weatherForecast__row .weatherForecast__card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
